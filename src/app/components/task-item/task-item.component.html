@@ -1,0 +1,17 @@
+<div 
+    [ngClass]="{reminder: task.reminder}" 
+    class="task"
+    (dblclick)="onToggle(task)"
+>
+    <h3>{{ task.text }} 
+        <fa-icon 
+            (click)="onDelete(task)" 
+            [icon]="faTimes" 
+            [ngStyle]="{'color':'red'}"
+        ></fa-icon>
+    </h3>
+    <p>{{ task.day }}</p>
+</div>
+
+<!-- ng add @fortawesome/angular-fontawesome -->
+<!-- select Free Solid Icons, Free Regular Icons, Free Brands Icons -->
